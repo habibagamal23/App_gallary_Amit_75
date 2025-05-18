@@ -7,14 +7,13 @@ import 'package:gallerymobile/views/MainScreen.dart';
 import 'package:gallerymobile/views/myHome.dart';
 import 'package:provider/provider.dart';
 
-import 'controllers/ImageProvider.dart';
 
 void main() {
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (_) => UserProvider()),
     ChangeNotifierProvider(create: (_) => Counter()),
     ChangeNotifierProvider(create: (_) => ThemeProvider()),
-    ChangeNotifierProvider(create: (_) => ImageProviderr()),
+    ChangeNotifierProvider(create: (_) => ImageProvider()),
   ], child: MyApp()));
 }
 
@@ -25,8 +24,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: context.watch<ThemeProvider>().currentTheme,
-        home: Mainscreen());
+      title: 'Flutter Demo',
+      theme:context.watch<ThemeProvider>().currentTheme,
+      home: Mainscreen()
+    );
   }
 }

@@ -51,11 +51,13 @@ class LoginScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) => MyHomePage(title: 'My Home'),
+                  builder: (_) => MyHomePage(),
                 ),
               );
             },
-            child: Text('Save ' , ),
+            child: Text(
+              'Save ',
+            ),
           ),
         ]),
       ),
